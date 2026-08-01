@@ -1,15 +1,24 @@
 {
   "name": "coasty-ecommerce-order-triage",
   "version": "1.0.0",
-  "description": "An AI agent that signs into a storefront with published demo credentials and triages the catalog.",
+  "description": "An AI agent that signs in to a real storefront, triages the live catalogue, and reports the numbers back — then films itself doing it.",
   "keywords": [
     "coasty",
     "computer-use",
     "ai-agent",
     "browser-automation",
     "rpa",
-    "e-commerce-ops",
-    "ecommerce-order-triage"
+    "llm",
+    "automation",
+    "web-automation",
+    "agentic-ai",
+    "no-code-scraping",
+    "web-scraping",
+    "scraping",
+    "playwright-alternative",
+    "zero-dependency",
+    "nodejs",
+    "e-commerce-ops"
   ],
   "homepage": "https://github.com/coasty-ai/coasty-ecommerce-order-triage",
   "repository": {

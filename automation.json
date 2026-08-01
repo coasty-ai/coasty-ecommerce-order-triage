@@ -14,5 +14,67 @@
   "machine": {
     "os_type": "linux",
     "desktop_enabled": true
+  },
+  "portal": {
+    "site": "Swag Labs  |  Sauce Demo",
+    "url": "https://www.saucedemo.com/inventory.html",
+    "nav": [
+      "Products",
+      "All Items",
+      "About",
+      "Cart",
+      "Reset App State",
+      "Logout"
+    ],
+    "label": "Sort by",
+    "query": "Price (low to high)",
+    "hint": "Signed in as standard_user. Sort the catalogue to rank every product by price.",
+    "columns": [
+      "Product name",
+      "Price",
+      "Rank",
+      "Add to cart"
+    ],
+    "total": "6",
+    "rows": [
+      [
+        "Sauce Labs Onesie",
+        "USD 7.99",
+        "1 of 6",
+        "Add to cart"
+      ],
+      [
+        "Sauce Labs Bike Light",
+        "USD 9.99",
+        "2 of 6",
+        "Add to cart"
+      ],
+      [
+        "Sauce Labs Bolt T-Shirt",
+        "USD 15.99",
+        "3 of 6",
+        "Add to cart"
+      ],
+      [
+        "Test.allTheThings() T-Shirt (Red)",
+        "USD 15.99",
+        "4 of 6",
+        "Add to cart"
+      ],
+      [
+        "Sauce Labs Backpack",
+        "USD 29.99",
+        "5 of 6",
+        "Add to cart"
+      ],
+      [
+        "Sauce Labs Fleece Jacket",
+        "USD 49.99",
+        "6 of 6",
+        "Add to cart"
+      ]
+    ],
+    "answerRow": 0,
+    "answer": "6 products; cheapest Onesie USD 7.99, dearest Fleece Jacket USD 49.99; sum USD 129.94"
   }
 }
