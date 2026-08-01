@@ -1,0 +1,18 @@
+{
+  "slug": "ecommerce-order-triage",
+  "title": "E-commerce — storefront inventory triage",
+  "vertical": "E-commerce Ops",
+  "niche": "storefront inventory check behind a demo login",
+  "target": "www.saucedemo.com",
+  "publicTarget": true,
+  "task": "TODO",
+  "expectedSteps": 16,
+  "maxSteps": 24,
+  "capCents": 121,
+  "cuaVersion": "v5",
+  "deadlineSeconds": 900,
+  "machine": {
+    "os_type": "linux",
+    "desktop_enabled": true
+  }
+}
