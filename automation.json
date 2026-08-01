@@ -5,7 +5,7 @@
   "niche": "storefront inventory check behind a demo login",
   "target": "www.saucedemo.com",
   "publicTarget": true,
-  "task": "TODO",
+  "task": "Go to https://www.saucedemo.com and sign in with the demo credentials the site publishes on its own login page: username standard_user, password secret_sauce. With the product catalogue open, sort it by price from lowest to highest. Then report the total number of products listed, the name and price of the cheapest product, the name and price of the most expensive product, and the sum of all product prices in USD.",
   "expectedSteps": 16,
   "maxSteps": 24,
   "capCents": 121,
