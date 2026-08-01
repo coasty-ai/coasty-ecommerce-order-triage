@@ -16,65 +16,135 @@
     "desktop_enabled": true
   },
   "portal": {
-    "site": "Swag Labs  |  Sauce Demo",
+    "theme": {
+      "bar": [19, 45, 38],
+      "accent": [15, 92, 66]
+    },
+    "site": "Swag Labs",
+    "sub": "Products",
     "url": "https://www.saucedemo.com/inventory.html",
     "nav": [
-      "Products",
       "All Items",
       "About",
-      "Cart",
+      "Cart (0)",
       "Reset App State",
       "Logout"
     ],
-    "label": "Sort by",
-    "query": "Price (low to high)",
-    "hint": "Signed in as standard_user. Sort the catalogue to rank every product by price.",
-    "columns": [
-      "Product name",
-      "Price",
-      "Rank",
-      "Add to cart"
-    ],
-    "total": "6",
-    "rows": [
-      [
-        "Sauce Labs Onesie",
-        "USD 7.99",
-        "1 of 6",
-        "Add to cart"
-      ],
-      [
-        "Sauce Labs Bike Light",
-        "USD 9.99",
-        "2 of 6",
-        "Add to cart"
-      ],
-      [
-        "Sauce Labs Bolt T-Shirt",
-        "USD 15.99",
-        "3 of 6",
-        "Add to cart"
-      ],
-      [
-        "Test.allTheThings() T-Shirt (Red)",
-        "USD 15.99",
-        "4 of 6",
-        "Add to cart"
-      ],
-      [
-        "Sauce Labs Backpack",
-        "USD 29.99",
-        "5 of 6",
-        "Add to cart"
-      ],
-      [
-        "Sauce Labs Fleece Jacket",
-        "USD 49.99",
-        "6 of 6",
-        "Add to cart"
-      ]
-    ],
-    "answerRow": 0,
-    "answer": "6 products; cheapest Onesie USD 7.99, dearest Fleece Jacket USD 49.99; sum USD 129.94"
+    "answer": "6 products listed; cheapest Sauce Labs Onesie USD 7.99; most expensive Sauce Labs Fleece Jacket USD 49.99; the 6 prices sum to USD 129.94",
+    "scenes": [
+      {
+        "kind": "load",
+        "url": "https://www.saucedemo.com/",
+        "text": "www.saucedemo.com - loading storefront...",
+        "status": "Opening https://www.saucedemo.com in the cloud browser",
+        "steps": 1
+      },
+      {
+        "kind": "login",
+        "url": "https://www.saucedemo.com/",
+        "sub": "Sign in",
+        "nav": [],
+        "title": "Sign in to Swag Labs",
+        "fields": [
+          ["Username", "standard_user"],
+          ["Password", "secret_sauce"]
+        ],
+        "mask": true,
+        "note": "Accepted usernames include standard_user. Password for all users: secret_sauce",
+        "status": "Signing in with the demo credentials the login page publishes",
+        "steps": 3
+      },
+      {
+        "kind": "cards",
+        "cols": 3,
+        "items": [
+          {
+            "title": "Sauce Labs Backpack",
+            "meta": "Streamlined laptop backpack",
+            "value": "USD 29.99",
+            "tag": "In stock"
+          },
+          {
+            "title": "Sauce Labs Bike Light",
+            "meta": "Water-resistant LED light",
+            "value": "USD 9.99",
+            "tag": "In stock"
+          },
+          {
+            "title": "Sauce Labs Bolt T-Shirt",
+            "meta": "Cotton tee, Sauce Labs bolt",
+            "value": "USD 15.99",
+            "tag": "In stock"
+          },
+          {
+            "title": "Sauce Labs Fleece Jacket",
+            "meta": "Midweight quarter-zip fleece",
+            "value": "USD 49.99",
+            "tag": "In stock"
+          },
+          {
+            "title": "Sauce Labs Onesie",
+            "meta": "Rib-snap infant onesie",
+            "value": "USD 7.99",
+            "tag": "In stock"
+          },
+          {
+            "title": "Test.allTheThings() T-Shirt (Red)",
+            "meta": "Cotton tee in red",
+            "value": "USD 15.99",
+            "tag": "In stock"
+          }
+        ],
+        "note": "Showing 6 of 6 products - Sort by: Name (A to Z), the default order",
+        "status": "Catalogue open: 6 products in the default Name (A to Z) order",
+        "steps": 5
+      },
+      {
+        "kind": "cards",
+        "cols": 3,
+        "items": [
+          {
+            "title": "Sauce Labs Onesie",
+            "meta": "Rib-snap infant onesie",
+            "value": "USD 7.99",
+            "tag": "Cheapest"
+          },
+          {
+            "title": "Sauce Labs Bike Light",
+            "meta": "Water-resistant LED light",
+            "value": "USD 9.99",
+            "tag": "2 of 6"
+          },
+          {
+            "title": "Sauce Labs Bolt T-Shirt",
+            "meta": "Cotton tee, Sauce Labs bolt",
+            "value": "USD 15.99",
+            "tag": "3 of 6"
+          },
+          {
+            "title": "Test.allTheThings() T-Shirt (Red)",
+            "meta": "Cotton tee in red",
+            "value": "USD 15.99",
+            "tag": "4 of 6"
+          },
+          {
+            "title": "Sauce Labs Backpack",
+            "meta": "Streamlined laptop backpack",
+            "value": "USD 29.99",
+            "tag": "5 of 6"
+          },
+          {
+            "title": "Sauce Labs Fleece Jacket",
+            "meta": "Midweight quarter-zip fleece",
+            "value": "USD 49.99",
+            "tag": "Dearest"
+          }
+        ],
+        "answerRow": 0,
+        "note": "Showing 6 of 6 products - Sort by: Price (low to high) - the 6 prices sum to USD 129.94",
+        "status": "Sort by set to Price (low to high) - reading every product price",
+        "steps": 5
+      }
+    ]
   }
 }
