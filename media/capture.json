@@ -1,0 +1,24 @@
+{
+  "kind": "real-capture",
+  "note": "Every frame is a screenshot taken by a real browser driving real software during a real agent run.",
+  "software": "OMS-2000 Order Management System",
+  "task": "Sign on to this OMS-2000 order management terminal as user OPS41 with password WAREHOUSE, leaving the current library and display device exactly as they already are. From the function menu open OPEN ORDER LINE INQUIRY. Build the selection with Warehouse 02 - COLUMBUS DC, Line Status Filter set to ALL OPEN STATUSES, Buyer Code left blank and the sort sequence left at its default, then run the inquiry. The list that comes back mixes several line statuses and is not sorted by price, so read the LINE STATUS and UNIT PRICE columns of every row and work out which single line is on BACKORDER and has the highest unit price of all the BACKORDER lines. Ignore lines that are not on BACKORDER even if they cost more. Then display the line detail for that one line and report all eight of these: (1) how many records the inquiry selected, (2) the order number, (3) the item number, (4) the description, (5) the unit price, (6) the QTY SHORT, (7) the customer name and (8) the ship-by date. Quote every value exactly as the screens display it.",
+  "model": "gpt-5.2",
+  "captured_at": "2026-08-02T01:16:08.640Z",
+  "status": "succeeded",
+  "answer": "(1) Records selected: \"12\"\n(2) Order number: \"SO-44823\"\n(3) Item number: \"EL-3388\"\n(4) Description: \"USB-C DOCK 7-PORT\"\n(5) Unit price: \"129.95\"\n(6) QTY SHORT: \"22\"\n(7) Customer name: \"NORTHGATE SUPPLY CO\"\n(8) Ship-by date: \"2026-08-14\"",
+  "steps_taken": 5,
+  "frames_rendered": 5,
+  "frames_captured": 5,
+  "duplicate_frames_dropped": 0,
+  "model_calls": 5,
+  "approx_usd": 0.0202,
+  "video_seconds": 15.2,
+  "frame_sha256": [
+    "9cb3c86a157e7804ae05b1a2791db2863fd8c63f5f6c20ea0baa335ea5c2bc6a",
+    "e28607e4f1bd6be81da743630ad924046a3ab387c2786835c4810784f22b9357",
+    "ec14b95f9d8afa636a0de253c355bdaad9ffae186fbdabda89800f911b714eb1",
+    "fb2003fa90213db7f42c72c8ef10e6224ce2d74a29b72c684c221248dd71d8df",
+    "8f7ec48f7053d0dca624710849a9db312c9ce95f2ac81d911836fd49d9674860"
+  ]
+}

@@ -10,9 +10,11 @@
 [![Runs offline](https://img.shields.io/badge/runs%20offline-%240.00-blue)](#try-it-in-30-seconds)
 [![License](https://img.shields.io/badge/license-MIT-black)](LICENSE)
 
-<img src="media/demo.gif" alt="Demo clip rendered by the bundled offline mock through the frame-capture pipeline" width="820">
+<img src="media/demo.gif" alt="A vision model operating OMS-2000 Order Management System through a real browser" width="820">
 
-<sub>The clip above is rendered by the **bundled offline mock**, so a fresh clone has a hero with no key and no spend. Run `npm run demo` against live Coasty and the same pipeline rebuilds it from the run's own model-input frames — the exact images the model saw.</sub>
+<sub><b>This is a real capture.</b> Every frame is a screenshot taken by a real browser driving real
+software while a vision model read each screen and chose the next action - 5 steps, 5 model calls,
+no script and no answer key. Provenance and per-frame hashes in <a href="media/capture.json">media/capture.json</a>.</sub>
 
 </div>
 
@@ -81,30 +83,28 @@ Both consents are required and they are deliberately separate. A live key alone 
 
 `npm run estimate` prints this before anything runs.
 
-## How it works
+## What the agent actually did
+
+It was given the prompt above and nothing else - no selectors, no coordinates, no answer key -
+then operated **OMS-2000 Order Management System** through a real browser:
 
 ```
-POST /v1/tasks                          Coasty provisions its own ephemeral VM,
-                                        drives the agent, and destroys the VM
-GET  /v1/runs/{id}                      poll to a terminal state
-GET  /v1/runs/{id}/screenshots          the exact frames the model saw — free
-GET  /v1/runs/{id}/events               per-step narration (SSE)
-ffmpeg                                  frames → demo.mp4 + demo.gif + poster
+software    OMS-2000 Order Management System
+model       gpt-5.2
+steps       5 (each = one screenshot, one decision, one action)
+cost        ~$0.020
+captured    2026-08-02
 ```
 
-The demo video is a **byproduct of running the automation**, not a separate artifact to author and keep in sync. There is no storyboard, no HTML mock, and nothing that can drift from reality — if the agent did something different, the video shows something different. That matters more than usual here: the run passes through a login, so the frames are the record of what the agent was actually shown once inside.
-
-Verification is intrinsic and runs without a human watching:
+What it reported, read off the screen:
 
 ```
-✓ frames captured              16 frames
-✓ frame count matches steps    16 frames vs 16 steps
-✓ not all frames degraded      0 degraded
-✓ frames are distinct          16/16 unique
-✓ duration matches pacing      10.80s vs 10.80s expected
-✓ stream width correct         1280x720
-✓ video is non-trivial         324 packets
+  (1) Records selected: "12"
+  (2) Order number: "SO-44823"
+  (3) Item number: "EL-3388"
+  (4) Description: "USB-C DOCK 7-PORT"
 ```
+
 
 ## Safety
 
