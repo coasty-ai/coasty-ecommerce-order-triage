@@ -33,12 +33,21 @@ The usual answer is a scraper: a session to keep alive, a set of selectors per t
 **Zero dependencies. Runs offline for $0 on a fresh clone. ~$0.80 to run for real.**
 
 ```
-"Go to https://www.saucedemo.com and sign in with the demo credentials the
- site publishes on its own login page: username standard_user, password
- secret_sauce. With the product catalogue open, sort it by price from
- lowest to highest. Then report the total number of products listed, the
- name and price of the cheapest product, the name and price of the most
- expensive product, and the sum of all product prices in USD."
+"Sign on to this OMS-2000 order management terminal as user OPS41 with
+ password WAREHOUSE, leaving the current library and display device exactly
+ as they already are. From the function menu open OPEN ORDER LINE INQUIRY.
+ Build the selection with Warehouse 02 - COLUMBUS DC, Line Status Filter
+ set to ALL OPEN STATUSES, Buyer Code left blank and the sort sequence left
+ at its default, then run the inquiry. The list that comes back mixes
+ several line statuses and is not sorted by price, so read the LINE STATUS
+ and UNIT PRICE columns of every row and work out which single line is on
+ BACKORDER and has the highest unit price of all the BACKORDER lines.
+ Ignore lines that are not on BACKORDER even if they cost more. Then
+ display the line detail for that one line and report all eight of these:
+ (1) how many records the inquiry selected, (2) the order number, (3) the
+ item number, (4) the description, (5) the unit price, (6) the QTY SHORT,
+ (7) the customer name and (8) the ship-by date. Quote every value exactly
+ as the screens display it."
 ```
 
 That prompt *is* the automation. When the storefront redesigns, the prompt still works.
